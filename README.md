@@ -7,7 +7,7 @@
 
 [![Website](https://img.shields.io/badge/Website-mbodhi.github.io%2Fbuddho--timer-D4AF37?style=flat-square)](https://mbodhi.github.io/buddho-timer/)
 [![Privacy Policy](https://img.shields.io/badge/Privacy-100%25_Offline-0E1420?style=flat-square&logo=shield)](https://mbodhi.github.io/buddho-timer/privacy.html)
-[![Terms of Service](https://img.shields.io/badge/Terms-Free_%26_Open-1E293B?style=flat-square)](https://mbodhi.github.io/buddho-timer/terms.html)
+[![Terms of Service](https://img.shields.io/badge/Terms-Free_to_Use-1E293B?style=flat-square)](https://mbodhi.github.io/buddho-timer/terms.html)
 [![Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-FF5E5B?style=flat-square&logo=kofi&logoColor=white)](https://ko-fi.com/hackysackapp)
 
 <br>
@@ -44,7 +44,7 @@
 Buddho Timer is built with a strict **privacy-first philosophy**:
 * **No Telemetry**: We do not include Google Analytics, Firebase, or tracking frameworks.
 * **No Cloud Accounts**: Everything resides securely on your own device.
-* **Zero Monetization**: Free and open to all practitioners.
+* **Zero Monetization**: Free for all practitioners without paywalls.
 
 For full details, please review our [Privacy Policy](https://mbodhi.github.io/buddho-timer/privacy.html).
 
