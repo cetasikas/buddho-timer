@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - Buddho Meditation Timer</title>
+    <meta name="description" content="Terms of Service for Buddho Meditation Timer. Free, offline, and open.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
+    <style>
+        :root {
+            --bg-deep: #070B11;
+            --surface: #0E1420;
+            --surface-border: #1E293B;
+            --accent-gold: #E5C378;
+            --accent-gold-glow: rgba(229, 195, 120, 0.15);
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.7;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        /* Navigation */
+        nav {
+            padding: 0 0 32px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--surface-border);
+            margin-bottom: 40px;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .nav-logo {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(229, 195, 120, 0.4));
+        }
+
+        .nav-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: var(--accent-gold);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 0 16px rgba(229, 195, 120, 0.3));
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.25rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            letter-spacing: 0.05em;
+            margin-bottom: 8px;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .card {
+            background-color: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 0.98rem;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        li strong {
+            color: var(--text-primary);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--surface-border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Buddho Logo" class="nav-logo">
+                <span class="nav-title">Buddho</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy</a>
+            </div>
+        </nav>
+
+        <header class="header">
+            <img src="logo.png" alt="Buddho Golden Lotus" class="header-logo">
+            <h1>Terms of Service</h1>
+            <p class="meta">Effective Date: August 21, 2026</p>
+        </header>
+
+        <div class="card">
+            <h2>1. Acceptance of Terms</h2>
+            <p>By downloading, installing, or using Buddho Timer ("the Application"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the Application.</p>
+        </div>
+
+        <div class="card">
+            <h2>2. Purpose & Use of the Application</h2>
+            <p>Buddho Timer is provided as a mindful utility for personal meditation timing, breathwork pacing, and relaxation:</p>
+            <ul>
+                <li><strong>Personal Use:</strong> The Application is intended for personal, non-commercial use.</li>
+                <li><strong>No Medical Claims:</strong> Buddho Timer is a meditation and relaxation aid. It is not a medical device, medical service, or healthcare diagnostic tool. It should not be used as a substitute for professional medical advice, diagnosis, or treatment.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>3. Local Storage & Data Ownership</h2>
+            <p>All data generated by the Application is stored locally on your device:</p>
+            <ul>
+                <li>You maintain sole responsibility for preserving and exporting your personal meditation logs and configurations.</li>
+                <li>We do not operate remote servers, cloud databases, or customer accounts, and cannot restore locally deleted data.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>4. Intellectual Property & License</h2>
+            <p>The Application design, graphic assets, logos, and custom audio assets are protected by applicable intellectual property rights. You are granted a personal, non-exclusive, non-transferable license to use the Application on your Android devices.</p>
+        </div>
+
+        <div class="card">
+            <h2>5. Disclaimer of Warranties</h2>
+            <p>The Application is provided "AS IS" and "AS AVAILABLE" without warranty of any kind, express or implied. To the maximum extent permitted by law, the developers disclaim all warranties regarding merchantability, fitness for a particular purpose, and non-infringement.</p>
+        </div>
+
+        <div class="card">
+            <h2>6. Limitation of Liability</h2>
+            <p>To the fullest extent permitted by applicable law, the developers and contributors of Buddho Timer shall not be liable for any direct, indirect, incidental, special, or consequential damages resulting from the use or inability to use the Application.</p>
+        </div>
+
+        <div class="card">
+            <h2>7. Changes to Terms</h2>
+            <p>We may update these Terms from time to time. Any modifications will be posted directly to this page with an updated Effective Date.</p>
+        </div>
+
+        <footer>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
+            <p>© 2026 Buddho Meditation Timer. Distraction-free, private, and open.</p>
+        </footer>
+    </div>
+</body>
+</html>

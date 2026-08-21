@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Buddho Meditation Timer</title>
+    <title>Buddho Timer - Mindful Meditation & Breathwork</title>
+    <meta name="description" content="A serene, distraction-free meditation timer and mindful breathwork companion. Authentic bells, box breathing, and complete privacy.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="icon.png">
     <style>
         :root {
-            --bg-deep: #090D14;
-            --surface: #111827;
-            --surface-border: #1F293D;
+            --bg-deep: #070B11;
+            --surface: #0E1420;
+            --surface-hover: #141D2E;
+            --surface-border: #1E293B;
             --accent-gold: #E5C378;
-            --accent-gold-glow: rgba(229, 195, 120, 0.15);
-            --text-primary: #F3F4F6;
-            --text-secondary: #9CA3AF;
-            --text-muted: #6B7280;
+            --accent-gold-light: #FDF1D6;
+            --accent-gold-glow: rgba(229, 195, 120, 0.18);
+            --accent-sand: #D5B467;
+            --text-primary: #F8FAFC;
+            --text-secondary: #94A3B8;
+            --text-muted: #64748B;
         }
 
         * {
@@ -29,211 +34,382 @@
             background-color: var(--bg-deep);
             color: var(--text-primary);
             font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.7;
-            padding: 40px 20px;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Ambient Glow Backdrop */
+        .ambient-glow {
+            position: fixed;
+            top: -200px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(229, 195, 120, 0.08) 0%, rgba(7, 11, 17, 0) 70%);
+            pointer-events: none;
+            z-index: 0;
         }
 
         .container {
-            max-width: 780px;
-            width: 100%;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 48px;
-            padding-bottom: 32px;
-            border-bottom: 1px solid var(--surface-border);
-        }
-
-        .logo-symbol {
-            width: 64px;
-            height: 64px;
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(229, 195, 120, 0.2) 0%, rgba(9, 13, 20, 0) 70%);
-            border: 1px solid var(--accent-gold);
-            color: var(--accent-gold);
-            font-size: 28px;
-        }
-
-        h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            color: var(--accent-gold);
-            letter-spacing: 0.05em;
-            margin-bottom: 8px;
-        }
-
-        .meta {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-        }
-
-        .card {
-            background-color: var(--surface);
-            border: 1px solid var(--surface-border);
-            border-radius: 16px;
-            padding: 32px;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        }
-
-        .highlight-banner {
-            background: linear-gradient(135deg, rgba(229, 195, 120, 0.1) 0%, rgba(17, 24, 39, 0.6) 100%);
-            border: 1px solid rgba(229, 195, 120, 0.3);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 28px;
-            display: flex;
-            align-items: center;
-            gap: 16px;
-        }
-
-        .highlight-icon {
-            font-size: 32px;
-            line-height: 1;
-        }
-
-        .highlight-text {
-            font-weight: 500;
-            color: #FDE68A;
-            font-size: 0.95rem;
-        }
-
-        h2 {
-            font-family: 'Cinzel', serif;
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: var(--accent-gold);
-            margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        p {
-            color: var(--text-secondary);
-            margin-bottom: 16px;
-            font-size: 0.98rem;
-        }
-
-        p:last-child {
-            margin-bottom: 0;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            margin-bottom: 16px;
-        }
-
-        li {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 0 24px;
             position: relative;
-            padding-left: 24px;
-            margin-bottom: 10px;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+            z-index: 1;
         }
 
-        li::before {
-            content: "•";
-            position: absolute;
-            left: 8px;
-            color: var(--accent-gold);
-            font-weight: bold;
+        /* Navigation */
+        nav {
+            padding: 28px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        li strong {
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
             color: var(--text-primary);
         }
 
-        .footer {
-            text-align: center;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--surface-border);
-            color: var(--text-muted);
-            font-size: 0.85rem;
+        .nav-logo {
+            width: 38px;
+            height: 38px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 8px rgba(229, 195, 120, 0.4));
         }
 
-        a {
+        .nav-title {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
             color: var(--accent-gold);
-            text-decoration: none;
-            transition: opacity 0.2s;
         }
 
-        a:hover {
-            text-decoration: underline;
-            opacity: 0.85;
+        .nav-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 0 80px;
+        }
+
+        .hero-logo-wrapper {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 24px;
+        }
+
+        .hero-logo {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 24px rgba(229, 195, 120, 0.35));
+            animation: gentle-pulse 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes gentle-pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 16px rgba(229, 195, 120, 0.25)); }
+            100% { transform: scale(1.03); filter: drop-shadow(0 0 28px rgba(229, 195, 120, 0.45)); }
+        }
+
+        .hero h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(135deg, #FFE7A0 0%, #D5B467 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-tagline {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 640px;
+            margin: 0 auto 36px;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .pill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 48px;
+        }
+
+        .pill {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid var(--surface-border);
+            padding: 6px 16px;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-sand);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            backdrop-filter: blur(8px);
+        }
+
+        .feature-preview {
+            max-width: 900px;
+            margin: 0 auto 80px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--surface-border);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 40px rgba(229, 195, 120, 0.1);
+        }
+
+        .feature-preview img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Feature Grid */
+        .features-section {
+            padding: 40px 0 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+
+        .section-header h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 12px;
+            letter-spacing: 0.04em;
+        }
+
+        .section-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--surface-border);
+            border-radius: 18px;
+            padding: 36px 28px;
+            transition: transform 0.3s, border-color 0.3s, background 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(229, 195, 120, 0.4);
+            background: var(--surface-hover);
+        }
+
+        .card-icon {
+            font-size: 32px;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .card h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+            font-weight: 600;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Values Banner */
+        .values-banner {
+            background: linear-gradient(180deg, var(--surface) 0%, rgba(14, 20, 32, 0.4) 100%);
+            border: 1px solid var(--surface-border);
+            border-radius: 20px;
+            padding: 48px;
+            margin: 60px 0 100px;
+            text-align: center;
+        }
+
+        .values-banner h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.75rem;
+            color: var(--accent-gold);
+            margin-bottom: 16px;
+        }
+
+        .values-banner p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 24px;
+            font-size: 1.05rem;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--surface-border);
+            padding: 48px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.3rem; }
+            .hero-tagline { font-size: 1.05rem; }
+            .values-banner { padding: 32px 20px; }
         }
     </style>
 </head>
 <body>
+    <div class="ambient-glow"></div>
+
     <div class="container">
-        <header class="header">
-            <div class="logo-symbol">☸</div>
-            <h1>Buddho Timer</h1>
-            <p class="meta">Privacy Policy • Effective Date: August 21, 2026</p>
+        <!-- Navigation -->
+        <nav>
+            <a href="index.html" class="nav-brand">
+                <img src="logo.png" alt="Buddho Timer Logo" class="nav-logo">
+                <span class="nav-title">Buddho</span>
+            </a>
+            <div class="nav-links">
+                <a href="privacy.html">Privacy</a>
+                <a href="terms.html">Terms</a>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero">
+            <div class="hero-logo-wrapper">
+                <img src="logo.png" alt="Buddho Golden Lotus Logo" class="hero-logo">
+            </div>
+            <h1>Cultivate Stillness with <span>Buddho</span></h1>
+            <p class="hero-tagline">A serene, distraction-free meditation timer and mindful breathwork companion designed for deep presence and calm.</p>
+
+            <div class="pill-badges">
+                <div class="pill"><span>🔒</span> 100% Offline & Private</div>
+                <div class="pill"><span>🔔</span> Authentic Acoustic Bells</div>
+                <div class="pill"><span>🫁</span> Mindful Box Breathing</div>
+                <div class="pill"><span>✨</span> Zero Ads or Subscriptions</div>
+            </div>
+
+            <div class="feature-preview">
+                <img src="feature_graphic.png" alt="Buddho Timer App Preview">
+            </div>
         </header>
 
-        <div class="highlight-banner">
-            <div class="highlight-icon">🔒</div>
-            <div class="highlight-text">
-                Buddho Timer is built with a 100% privacy-first philosophy. We do not collect, track, store, transmit, or monetize any of your personal data.
+        <!-- Features Grid -->
+        <section class="features-section">
+            <div class="section-header">
+                <h2>Designed for Mindful Practice</h2>
+                <p>Pure simplicity, rich acoustics, and peaceful focus with no unnecessary digital clutter.</p>
             </div>
-        </div>
 
-        <div class="card">
-            <h2>1. Zero Data Collection</h2>
-            <p>Buddho Timer operates entirely on your local device without any remote analytics or user tracking:</p>
-            <ul>
-                <li><strong>No Analytics or Trackers:</strong> We do not include Firebase, Google Analytics, telemetry, or behavioral tracking SDKs.</li>
-                <li><strong>No Advertisements:</strong> There are no advertising frameworks or data profiling.</li>
-                <li><strong>No Accounts or Logins:</strong> You do not need to register, provide an email address, or create an account.</li>
-                <li><strong>No Internet Permission:</strong> The app does not request or use Android network permissions (<code>android.permission.INTERNET</code>). It runs 100% offline.</li>
-            </ul>
-        </div>
+            <div class="grid">
+                <div class="card">
+                    <div class="card-icon">🔔</div>
+                    <h3>Acoustic Bell Chimes</h3>
+                    <p>Experience authentic, peaceful resonance with field-recorded meditation bells, deep temple gongs, and Tibetan singing bowls with natural acoustics.</p>
+                </div>
 
-        <div class="card">
-            <h2>2. Local Data Storage & Ownership</h2>
-            <p>All your meditation logs, personal streaks, breathing configs, and preferences are stored exclusively on your device's sandboxed storage:</p>
-            <ul>
-                <li><strong>Full Ownership:</strong> Your practice history belongs solely to you.</li>
-                <li><strong>Manual Export / Import:</strong> You can export your data to JSON or CSV at any time and save it to the local folder of your choice.</li>
-                <li><strong>Automatic Google Drive Backup:</strong> If enabled in your Android system settings, standard Android Auto-Backup securely syncs your app sandbox to your personal private Google Drive account. We have zero access to this backup.</li>
-                <li><strong>Complete Deletion:</strong> Uninstalling the app permanently purges all local app data from your device.</li>
-            </ul>
-        </div>
+                <div class="card">
+                    <div class="card-icon">🫁</div>
+                    <h3>Mindful Breathwork</h3>
+                    <p>Built-in Pranayama Box Breathing (Inhale, Hold, Exhale, Hold) with rhythmic visual feedback and customizable second-by-second pacing.</p>
+                </div>
 
-        <div class="card">
-            <h2>3. Device Permissions</h2>
-            <p>Buddho Timer requests only the minimum device capabilities necessary to function as a background meditation timer:</p>
-            <ul>
-                <li><strong>Notifications & Foreground Service:</strong> Used solely to display the countdown and overtime counter in your notification shade while you meditate.</li>
-                <li><strong>Vibration / Haptics:</strong> Used to provide gentle tactile start, interval, and completion cues.</li>
-                <li><strong>Do Not Disturb Access (Optional):</strong> Allows the app to temporarily silence incoming phone calls and interruptions during active meditation sessions.</li>
-                <li><strong>Battery Optimization Exemption (Optional):</strong> Ensures the Android operating system does not prematurely sleep the timer service during long meditation sessions.</li>
-            </ul>
-        </div>
+                <div class="card">
+                    <div class="card-icon">🌑</div>
+                    <h3>OLED Zen Interface</h3>
+                    <p>Designed with deep obsidian black for zero eye strain, falling leaf micro-animations, and instant tap-to-blackout for unhindered meditation.</p>
+                </div>
 
-        <div class="card">
-            <h2>4. Children's Privacy</h2>
-            <p>Because Buddho Timer does not collect or transmit any personally identifiable information, it complies with COPPA and is safe for individuals of all ages.</p>
-        </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Practice Streaks & Logs</h3>
+                    <p>Track your daily consistency, milestones, and meditation minutes over time with offline SQLite storage and optional notes.</p>
+                </div>
 
-        <div class="card">
-            <h2>5. Contact & Support</h2>
-            <p>If you have any questions or feedback regarding this Privacy Policy or the app, you may reach out directly via our community channels or support email.</p>
-        </div>
+                <div class="card">
+                    <div class="card-icon">💾</div>
+                    <h3>Full Data Ownership</h3>
+                    <p>Your session history is 100% private. Export anytime to JSON or CSV, and enjoy seamless automatic Google Drive sandbox backup.</p>
+                </div>
 
-        <footer class="footer">
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Zero Distractions</h3>
+                    <p>No user accounts, no social feeds, no subscriptions, no notifications, and no network tracking. Just you and your breath.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Banner -->
+        <section class="values-banner">
+            <h3>Pure Sanctuary for Your Practice</h3>
+            <p>Buddho is built on the premise that spiritual tools should never commodify your attention. Everything runs strictly on your device.</p>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+            </div>
             <p>© 2026 Buddho Meditation Timer. Distraction-free, private, and open.</p>
         </footer>
     </div>
