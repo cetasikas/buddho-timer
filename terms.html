@@ -7,7 +7,7 @@
     <meta name="description" content="Terms of Service for Buddho Meditation Timer. Free, offline, and open.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="icon.png">
     <style>
         :root {
@@ -15,6 +15,8 @@
             --surface: #0E1420;
             --surface-border: #1E293B;
             --accent-gold: #E5C378;
+            --gold-primary: #D4AF37;
+            --gold-warm: #E2C772;
             --accent-gold-glow: rgba(229, 195, 120, 0.15);
             --text-primary: #F8FAFC;
             --text-secondary: #94A3B8;
@@ -45,7 +47,7 @@
 
         /* Navigation */
         nav {
-            padding: 0 0 32px 0;
+            padding: 0 0 28px 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -76,6 +78,12 @@
             color: var(--accent-gold);
         }
 
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         .nav-links {
             display: flex;
             gap: 20px;
@@ -91,6 +99,33 @@
 
         .nav-links a:hover {
             color: var(--accent-gold);
+        }
+
+        .btn-donate {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            border-radius: 999px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid var(--gold-primary);
+            color: #F8FAFC;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn-donate:hover {
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.28) 0%, rgba(212, 175, 55, 0.12) 100%);
+            color: #FFFFFF;
+            transform: translateY(-1px);
+        }
+
+        .btn-donate svg {
+            width: 13px;
+            height: 13px;
+            fill: var(--gold-warm);
         }
 
         .header {
@@ -207,9 +242,17 @@
                 <img src="logo.png" alt="Buddho Logo" class="nav-logo">
                 <span class="nav-title">Buddho</span>
             </a>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="privacy.html">Privacy</a>
+            <div class="nav-right">
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="privacy.html">Privacy</a>
+                </div>
+                <a href="index.html#support" class="btn-donate">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+                    </svg>
+                    <span>Donate</span>
+                </a>
             </div>
         </nav>
 
@@ -265,6 +308,7 @@
         <footer>
             <div class="footer-links">
                 <a href="index.html">Home</a>
+                <a href="index.html#support">Donate</a>
                 <a href="privacy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
             </div>
