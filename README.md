@@ -5,9 +5,9 @@
 # Buddho Timer
 ### A Distraction-Free Meditation Timer & Mindful Breathwork Companion
 
-[![Website](https://img.shields.io/badge/Website-mbodhi.github.io%2Fbuddho--timer-D4AF37?style=flat-square)](https://mbodhi.github.io/buddho-timer/)
-[![Privacy Policy](https://img.shields.io/badge/Privacy-100%25_Offline-0E1420?style=flat-square&logo=shield)](https://mbodhi.github.io/buddho-timer/privacy.html)
-[![Terms of Service](https://img.shields.io/badge/Terms-Free_to_Use-1E293B?style=flat-square)](https://mbodhi.github.io/buddho-timer/terms.html)
+[![Website](https://img.shields.io/badge/Website-cetasikas.github.io%2Fbuddho--timer-D4AF37?style=flat-square)](https://cetasikas.github.io/buddho-timer/)
+[![Privacy Policy](https://img.shields.io/badge/Privacy-100%25_Offline-0E1420?style=flat-square&logo=shield)](https://cetasikas.github.io/buddho-timer/privacy.html)
+[![Terms of Service](https://img.shields.io/badge/Terms-Free_to_Use-1E293B?style=flat-square)](https://cetasikas.github.io/buddho-timer/terms.html)
 [![Ko-fi](https://img.shields.io/badge/Support_on-Ko--fi-FF5E5B?style=flat-square&logo=kofi&logoColor=white)](https://ko-fi.com/hackysackapp)
 
 <br>
@@ -20,9 +20,9 @@
 
 ## 🌿 Quick Links
 
-* 🌟 **Live Landing Page:** [https://mbodhi.github.io/buddho-timer/](https://mbodhi.github.io/buddho-timer/)
-* 🔒 **Privacy Policy:** [https://mbodhi.github.io/buddho-timer/privacy.html](https://mbodhi.github.io/buddho-timer/privacy.html)
-* 📜 **Terms of Service:** [https://mbodhi.github.io/buddho-timer/terms.html](https://mbodhi.github.io/buddho-timer/terms.html)
+* 🌟 **Live Landing Page:** [https://cetasikas.github.io/buddho-timer/](https://cetasikas.github.io/buddho-timer/)
+* 🔒 **Privacy Policy:** [https://cetasikas.github.io/buddho-timer/privacy.html](https://cetasikas.github.io/buddho-timer/privacy.html)
+* 📜 **Terms of Service:** [https://cetasikas.github.io/buddho-timer/terms.html](https://cetasikas.github.io/buddho-timer/terms.html)
 * ☕ **Support on Ko-fi (Dāna):** [https://ko-fi.com/hackysackapp](https://ko-fi.com/hackysackapp)
 
 ---
@@ -46,7 +46,7 @@ Buddho Timer is built with a strict **privacy-first philosophy**:
 * **No Cloud Accounts**: Everything resides securely on your own device.
 * **Zero Monetization**: Free for all practitioners without paywalls.
 
-For full details, please review our [Privacy Policy](https://mbodhi.github.io/buddho-timer/privacy.html).
+For full details, please review our [Privacy Policy](https://cetasikas.github.io/buddho-timer/privacy.html).
 
 ---
 
